@@ -3,39 +3,15 @@ import { FaBuilding, FaTools, FaUsers } from "react-icons/fa";
 import { GrNotes } from "react-icons/gr";
 import { IoMdCheckbox, IoMdCheckboxOutline } from "react-icons/io";
 import { MdDashboard, MdForklift } from "react-icons/md";
+import { Footer } from "./components/footer";
+import { Aside } from "./components/aside";
+
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex-1 flex">
-        <aside className="w-64 p-6 bg-white/40">
-          <Image src={"/image/logo.png"} className="w-full"
-           alt="Logo" width={240} height={240} />
-
-          <nav className="space-y-4 flex flex-col mt-8">
-            <a href="" className="flex items-center gap-4
-                                 hover:font-semibold">
-              <MdDashboard />
-              Dashboard
-            </a>
-            <a href="" className="flex items-center gap-4
-                                 hover:font-semibold">
-              <FaBuilding />
-              Ambientes</a>
-            <a href="" className="flex items-center gap-4
-                                 hover:font-semibold">
-              <MdForklift />
-              Equipamentos</a>
-            <a href="" className="flex items-center gap-4
-                                 hover:font-semibold">
-              <FaTools />
-              Manutenções</a>
-            <a href="" className="flex items-center gap-4
-                                 hover:font-semibold">
-              <FaUsers />
-              Usuário</a>
-          </nav>
-        </aside>
+        <Aside />
 
         <main className="flex-1 flex flex-col">
 
@@ -95,11 +71,7 @@ export default function Home() {
         </main>
 
       </div>
-      <footer 
-      className="p-6 bg-white/40 text-center 
-              text-red-900 text-sm">
-        Todos os direitos reservados &copy; 2024
-      </footer>
+      <Footer />
     </div>
   );
 }
