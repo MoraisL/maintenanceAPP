@@ -17,7 +17,7 @@ export function NavLink(){
 
         <>
         {links.map((obj) => (
-            <a href={obj.target} className="flex items-center gap-4 hover:font-semibold ">
+            <a href={obj.target} className="flex items-center gap-4 hover:font-semibold text-black ">
               {obj.icon}
               {obj.text}
             </a>

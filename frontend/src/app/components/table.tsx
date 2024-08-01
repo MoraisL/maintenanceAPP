@@ -14,26 +14,26 @@ interface TableProps {
 
 const TableComponent: React.FC<TableProps> = ({ data }) => {
   return (
-    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <table className="w-full border-collapse">
       <thead>
-        <tr style={{ borderBottom: '2px solid black', textAlign: 'center' }}>
-          <th style={{ padding: '8px' }}>Ambiente</th>
-          <th style={{ padding: '8px' }}>Equipamento</th>
-          <th style={{ padding: '8px' }}>Solicitação</th>
-          <th style={{ padding: '8px' }}>Atendimento</th>
-          <th style={{ padding: '8px' }}>Ações</th>
+        <tr className="text-center bg-gray-500 rounded-3xl text-black">
+          <th className="p-2">Ambiente</th>
+          <th className="p-2">Equipamento</th>
+          <th className="p-2">Solicitação</th>
+          <th className="p-2">Atendimento</th>
+          <th className="p-2">Ações</th>
         </tr>
       </thead>
       <tbody>
         {data.map((item, index) => (
-          <tr key={index} style={{ textAlign: 'center' }}>
-            <td style={{ padding: '8px' }}>{item.ambiente}</td>
-            <td style={{ padding: '8px' }}>{item.equipamento}</td>
-            <td style={{ padding: '8px' }}>{item.solicitacao}</td>
-            <td style={{ padding: '8px' }}>{item.atendimento}</td>
-            <td style={{ padding: '8px', display: 'flex', justifyContent: 'center' }}>
-            <FaEdit className="cursor-pointer text-blue-500 hover:text-blue-700" />
-            <FaTrash className="cursor-pointer text-red-500 hover:text-red-700" />
+          <tr key={index} className="text-center">
+            <td className="p-2">{item.ambiente}</td>
+            <td className="p-2">{item.equipamento}</td>
+            <td className="p-2">{item.solicitacao}</td>
+            <td className="p-2">{item.atendimento}</td>
+            <td className="p-2 flex justify-center">
+              <FaEdit className="cursor-pointer text-blue-500 hover:text-blue-700 mx-1" />
+              <FaTrash className="cursor-pointer text-red-500 hover:text-red-700 mx-1" />
             </td>
           </tr>
         ))}
@@ -43,3 +43,4 @@ const TableComponent: React.FC<TableProps> = ({ data }) => {
 };
 
 export default TableComponent;
+

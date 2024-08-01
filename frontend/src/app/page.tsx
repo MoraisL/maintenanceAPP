@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaBuilding, FaTools, FaUsers } from "react-icons/fa";
+import { BsEmojiHeartEyes, BsEmojiExpressionless, BsEmojiAngry, BsEmojiSunglasses   } from "react-icons/bs";
 import { GrNotes } from "react-icons/gr";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { MdForklift } from "react-icons/md";
@@ -7,6 +8,7 @@ import { Footer } from "./components/footer";
 import { Aside } from "./components/aside";
 import { Card } from "./components/card";
 import TableComponent from "./components/table";
+import { BarChart } from '@tremor/react';
 
 const Home = () => {
   const tableData = [
@@ -30,23 +32,43 @@ const Home = () => {
     { ambiente: 'Recepção', equipamento: 'Telefone', solicitacao: 105, atendimento: 206 },
   ];
 
+  const chartdata = [
+  {
+    name: 'Ambientes',
+    'Number of threatened species': 2488,
+  },
+  {
+    name: 'Equipamentos',
+    'Number of threatened species': 1445,
+  },
+  {
+    name: 'O.S Abertas',
+    'Number of threatened species': 743,
+  },
+  {
+    name: 'O.S Concluidas',
+    'Number of threatened species': 281,
+  },
+];
+
+
   return (
     <div className="h-screen flex flex-col">
       <div className="flex-1 flex">
         <Aside />
 
-        <main className="flex-1 flex flex-col">
+        <main className="flex-1 flex flex-col bg-purple-900 ">
 
           <h1 className="text-4xl font-bold uppercase w-full
-           bg-white/40 p-6 text-center">
+           p-6 text-center">  
             Sistema de Gestão de Manutenção</h1>
 
-          <div className="rounded-lg">
-            <div className="grid grid-cols-4 gap-4 p-6 ">
-              <Card color={"bg-orange-200"} qty="200" text="Ambientes" icon={<FaBuilding size={48} />} />
-              <Card color={"bg-blue-200"} qty="200" text="Equipamentos" icon={<MdForklift size={48} />} />
-              <Card color={"bg-red-200"} qty="200" text="O.S. Abertas" icon={<GrNotes size={48} />} />
-              <Card color={"bg-green-200"} qty="200" text="O.S. Concluídas" icon={<IoMdCheckboxOutline size={48} />} />
+          <div className="rounded-xl">
+            <div className="grid grid-cols-4 gap-4 p-6">
+              <Card color={"bg-red-500"} qty="200" text="Ambientes" icon={<BsEmojiHeartEyes size={48} />} />
+              <Card color={"bg-violet-500"} qty="200" text="Equipamentos" icon={<BsEmojiExpressionless size={48} />} />
+              <Card color={"bg-red-500"} qty="200" text="O.S. Abertas" icon={<BsEmojiAngry size={48} />} />
+              <Card color={"bg-violet-500"} qty="200" text="O.S. Concluídas" icon={<BsEmojiSunglasses size={48} />} />
             </div>
             <div  className="text-3xl font-bold mb-4 text-center">
               <h1>Tabela de Equipamentos</h1>
@@ -57,7 +79,24 @@ const Home = () => {
   }}>
            
             <TableComponent data={tableData} />
-            </div>
+            
+            </div> 
+
+            
+
+
+            <BarChart
+    data={chartdata}
+    index="name"
+    categories={['Number of threatened species']}
+    colors={['black']} 
+    yAxisWidth={48}
+      />
+
+
+
+
+            
           </div>
 
         </main>

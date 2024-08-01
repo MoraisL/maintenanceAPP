@@ -15,7 +15,7 @@ export function Card({color, qty, text, icon}: CardInterface){
         gap-2 rounded-xl`}>
             <div className="flex-1 flex flex-col">
                 <strong className="text-3xl font-bold">{qty}</strong>
-                <span className="text-sm text-zinc-500">{text}</span>
+                <span className="text-sm text-black">{text}</span>
             </div>
             {icon}
 
