@@ -9,7 +9,7 @@ export function Aside() {
             <Image src={"/image/logo.png"} className="w-full"
            alt="Logo" width={240} height={240} />
 
-          <nav className="space-y-4 flex flex-col mt-8">
+          <nav className="space-y-10 flex flex-col mt-8">
           <NavLink />
           </nav>
         </aside>

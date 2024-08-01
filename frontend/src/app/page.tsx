@@ -80,11 +80,12 @@ const Home = () => {
            
             <TableComponent data={tableData} />
             
+
+            
             </div> 
 
             
-
-
+            
             <BarChart
     data={chartdata}
     index="name"
@@ -92,6 +93,7 @@ const Home = () => {
     colors={['black']} 
     yAxisWidth={48}
       />
+            
 
 
 
