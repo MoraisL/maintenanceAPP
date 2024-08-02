@@ -2,11 +2,11 @@ import { FaBuilding, FaTools, FaUsers } from "react-icons/fa";
 import { MdDashboard, MdForklift } from "react-icons/md";
 
 const links = [
-        {target:"#", text: "Dashboard", icon: <MdDashboard />},
-        {target:"#", text: "Ambientes", icon: <FaBuilding />},
-        {target:"#", text: "Equipamentos", icon: <MdForklift />},
-        {target:"#", text: "Manutenção", icon: <FaTools />},
-        {target:"#", text: "Usuários", icon: <FaUsers />},
+        {target:"/dashboard", text: "Dashboard", icon: <MdDashboard />},
+        {target:"/manutencao", text: "Manutenções", icon: <FaBuilding />},
+        {target:"/pecasemateriais", text: "Peças e Materiais", icon: <MdForklift />},
+        {target:"/relatorios", text: "Relatórios", icon: <FaTools />},
+        {target:"/Custos", text: "Custos", icon: <FaUsers />},
 ];
 
 

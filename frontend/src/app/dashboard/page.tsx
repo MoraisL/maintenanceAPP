@@ -4,10 +4,10 @@ import { BsEmojiHeartEyes, BsEmojiExpressionless, BsEmojiAngry, BsEmojiSunglasse
 import { GrNotes } from "react-icons/gr";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { MdForklift } from "react-icons/md";
-import { Footer } from "./components/footer";
-import { Aside } from "./components/aside";
-import { Card } from "./components/card";
-import TableComponent from "./components/table";
+import { Footer } from "../components/footer";
+import { Aside } from "../components/aside";
+import { Card } from "../components/card";
+import TableComponent from "../components/table";
 import { BarChart } from '@tremor/react';
 
 const Home = () => {
@@ -78,7 +78,6 @@ const Home = () => {
     scrollbarColor: '#888 #f1f1f1', /* Para Firefox */
   }}>
            
-            <TableComponent data={tableData} />
             
 
             

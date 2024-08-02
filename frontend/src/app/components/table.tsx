@@ -14,9 +14,9 @@ interface TableProps {
 
 const TableComponent: React.FC<TableProps> = ({ data }) => {
   return (
-    <table className="w-full border-collapse">
+    <table className="w-full border-collapse bg-gray-800">
       <thead>
-        <tr className="text-center bg-gray-500 rounded-3xl text-black">
+        <tr className="text-center bg-gray-300 rounded-3xl text-black">
           <th className="p-2">Ambiente</th>
           <th className="p-2">Equipamento</th>
           <th className="p-2">Solicitação</th>

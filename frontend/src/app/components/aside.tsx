@@ -5,7 +5,7 @@ import { NavLink } from "./navlink";
 
 export function Aside() {
     return(
-        <aside className="w-64 p-6 bg-white">
+        <aside className="w-64 p-6 bg-gray-500">
             <Image src={"/image/logo.png"} className="w-full"
            alt="Logo" width={240} height={240} />
 
