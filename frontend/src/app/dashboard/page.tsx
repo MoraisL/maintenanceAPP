@@ -78,6 +78,7 @@ const Home = () => {
     scrollbarColor: '#888 #f1f1f1', /* Para Firefox */
   }}>
            
+           <TableComponent data={tableData} />
             
 
             

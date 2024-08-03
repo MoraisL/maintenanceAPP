@@ -1,12 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
-import { FaBuilding, FaTools, FaUsers } from "react-icons/fa";
-import { BsEmojiHeartEyes, BsEmojiExpressionless, BsEmojiAngry, BsEmojiSunglasses } from "react-icons/bs";
-import { GrNotes } from "react-icons/gr";
-import { IoMdCheckboxOutline } from "react-icons/io";
-import { MdForklift } from "react-icons/md";
 import { Footer } from "../components/footer";
 import { Aside } from "../components/aside";
 import { Card } from "../components/card";
@@ -18,21 +12,11 @@ import MachineDetails from "../components/manutencao/MachineDetails";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("Cadastro");
-  
-  const tableData = [
-    { ambiente: 'Escritório', equipamento: 'Computador', solicitacao: 101, atendimento: 202 },
-    { ambiente: 'Laboratório', equipamento: 'Microscópio', solicitacao: 102, atendimento: 203 },
-    { ambiente: 'Sala de Reunião', equipamento: 'Projetor', solicitacao: 103, atendimento: 204 },
-    { ambiente: 'Área Comum', equipamento: 'Câmera de segurança', solicitacao: 104, atendimento: 205 },
-    { ambiente: 'Recepção', equipamento: 'Telefone', solicitacao: 105, atendimento: 206 },
-    // Add more entries as needed
-  ];
 
-  const chartData = [
-    { name: "Ambientes", "Number of threatened species": 2488 },
-    { name: "Equipamentos", "Number of threatened species": 1445 },
-    { name: "O.S Abertas", "Number of threatened species": 743 },
-    { name: "O.S Concluidas", "Number of threatened species": 281 },
+  const tabs = [
+    { id: "Cadastro", title: "Cadastro de Máquinas" },
+    { id: "Visualizacao", title: "Visualização de Máquinas" },
+    // Adicione mais abas aqui conforme necessário
   ];
 
   return (
@@ -44,10 +28,15 @@ const Home = () => {
             Sistema de Gestão de Manutenção
           </h1>
 
-          <MachineTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+          <MachineTabs
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            tabs={tabs}
+          />
 
           {activeTab === "Cadastro" && <MachineRegistration />}
           {activeTab === "Visualizacao" && <MachineDetails />}
+
 
         </main>
       </div>
