@@ -2,46 +2,46 @@
 
 const mockData = [
   { 
-    nome: "Trator", 
-    tipo: "Agrícola", 
+    identificacao: "M-001", 
+    maquina: "Trator", 
     modelo: "XJ-200", 
-    fabricacao: "2023-01-15", 
-    numeroSerie: "123456789", 
+    equipe: "Equipe A", 
+    status: "Em andamento", 
     localizacao: "Fazenda A", 
-    imagens: "N/A" 
+    imagens: "imagem1.jpg" 
   },
   { 
-    nome: "Caminhão", 
-    tipo: "Transporte", 
+    identificacao: "M-002", 
+    maquina: "Caminhão", 
     modelo: "FZ-300", 
-    fabricacao: "2022-07-22", 
-    numeroSerie: "987654321", 
+    equipe: "Equipe B", 
+    status: "Concluída", 
     localizacao: "Depósito B", 
-    imagens: "N/A" 
+    imagens: "imagem2.jpg" 
   },
   { 
-    nome: "Gerador", 
-    tipo: "Energia", 
+    identificacao: "M-003", 
+    maquina: "Gerador", 
     modelo: "GX-150", 
-    fabricacao: "2021-11-10", 
-    numeroSerie: "456789123", 
+    equipe: "Equipe C", 
+    status: "Aguardando peças", 
     localizacao: "Sala de Máquinas", 
-    imagens: "N/A" 
+    imagens: "imagem3.jpg" 
   },
 ];
 
 const MachineDetails: React.FC = () => {
   return (
     <div className="bg-white shadow p-6 rounded-lg">
-      <h1 className="text-black text-2xl mb-4">Detalhes das Máquinas</h1>
+      <h1 className="text-black text-2xl mb-4">Detalhes das Manutenções</h1>
       <table className="w-full text-left border-collapse">
         <thead>
           <tr>
-            <th className="border p-2 text-black">Nome</th>
-            <th className="border p-2 text-black">Tipo</th>
+            <th className="border p-2 text-black">Identificação</th>
+            <th className="border p-2 text-black">Máquina</th>
             <th className="border p-2 text-black">Modelo</th>
-            <th className="border p-2 text-black">Dados de Fabricação</th>
-            <th className="border p-2 text-black">Número de Série</th>
+            <th className="border p-2 text-black">Equipe</th>
+            <th className="border p-2 text-black">Status</th>
             <th className="border p-2 text-black">Localização</th>
             <th className="border p-2 text-black">Imagens</th>
           </tr>
@@ -49,11 +49,11 @@ const MachineDetails: React.FC = () => {
         <tbody>
           {mockData.map((item, index) => (
             <tr key={index}>
-              <td className="border p-2 text-black">{item.nome}</td>
-              <td className="border p-2 text-black">{item.tipo}</td>
+              <td className="border p-2 text-black">{item.identificacao}</td>
+              <td className="border p-2 text-black">{item.maquina}</td>
               <td className="border p-2 text-black">{item.modelo}</td>
-              <td className="border p-2 text-black">{item.fabricacao}</td>
-              <td className="border p-2 text-black">{item.numeroSerie}</td>
+              <td className="border p-2 text-black">{item.equipe}</td>
+              <td className="border p-2 text-black">{item.status}</td>
               <td className="border p-2 text-black">{item.localizacao}</td>
               <td className="border p-2 text-black">{item.imagens}</td>
             </tr>

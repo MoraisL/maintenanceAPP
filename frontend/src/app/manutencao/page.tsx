@@ -14,8 +14,8 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState("Cadastro");
 
   const tabs = [
-    { id: "Cadastro", title: "Cadastro de Máquinas" },
-    { id: "Visualizacao", title: "Visualização de Máquinas" },
+    { id: "Cadastro", title: "Cadastro de Manutenção" },
+    { id: "Visualizacao", title: "Visualização de Manutenções" },
     // Adicione mais abas aqui conforme necessário
   ];
 

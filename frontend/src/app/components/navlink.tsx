@@ -3,12 +3,13 @@ import { MdDashboard, MdForklift } from "react-icons/md";
 import { BsCashCoin } from "react-icons/bs";
 
 const links = [
-        {target:"/dashboard", text: "Dashboard", icon: <MdDashboard />},
+        {target:"/dashboard", text: "Página Inicial", icon: <MdDashboard />},
         {target:"/manutencao", text: "Manutenções", icon: <FaBuilding />},
-        {target:"/pecasemateriais", text: "Peças e Materiais", icon: <MdForklift />},
+        {target:"/pecasemateriais", text: "Gestão de Estoque", icon: <MdForklift />},
         {target:"/relatorios", text: "Relatórios", icon: <FaTools />},
         {target:"/custos", text: "Custos", icon: <BsCashCoin />},
         {target:"/usuarios", text: "Usuário", icon: <FaUsers />},
+        {target:"/equipes", text: "Equipes", icon: <FaUsers />},
 ];
 
 
